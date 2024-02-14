@@ -69,3 +69,8 @@ padding:0px;
   justify-content: space-between;
 }
 
+.taskDone{
+  text-decoration: line-through;
+  background-color: red;
+}
+
