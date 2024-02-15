@@ -4,7 +4,7 @@ body{
   background-repeat: no-repeat;
   background-size: contain; /* 혹은 auto로 설정하여 원본 이미지 크기에 맞게 표시될 수 있습니다. */
   background-position: center;
-  min-height: 100vh;
+  min-height: 137vh;
   min-width:100vh;
   background-color:#ffc309 ;
   display:flex;
@@ -27,7 +27,7 @@ align-items: center;
     text-align: center;
     justify-content: center;
   width:50%;
-  height:20%;
+  height:10%;
   text-align: center;
   background-color: white;
   opacity: 0.2;
@@ -44,8 +44,10 @@ align-items: center;
 }
 .taskTaps{
   display:flex;
+  justify-content: center;
  border-bottom:1px solid lightgray;
  position:relative;
+ cursor:pointer;
 }
 .taskTaps div{
   padding:1em;
@@ -57,10 +59,11 @@ align-items: center;
 }
 #underLine{
 height:4px;
-background-color: pink;
+background-color: red;
 position:absolute;
+
 width:50px;
-left:0px;
+left:230px;
 top:50px;
 padding:0px;
 }
@@ -72,5 +75,29 @@ padding:0px;
 .taskDone{
   text-decoration: line-through;
   background-color: red;
+}
+@media(max-width:390px){
+  body{
+   margin-top:15px;
+    background-repeat: no-repeat;
+    background-size: cover auto; /* 혹은 auto로 설정하여 원본 이미지 크기에 맞게 표시될 수 있습니다. */
+    /* background-position: center; */
+    min-height: 170vh;
+    min-width:20vh;
+  
+  }
+  .container{
+    min-height: 170vh;
+    min-width:20vh;
+  }
+  .inputArea{
+    height:50px;
+    width:350px;
+    padding:10px;
+  }
+  .taskTaps{
+    justify-content: center;
+
+  }
 }
 
