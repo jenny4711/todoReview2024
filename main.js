@@ -9,6 +9,7 @@ let underLine = document.getElementById("underLine");
 let mode="all"
 let filterList=[]
 let todoList=[]
+let list =[]
 for(let i=1;i<taps.length;i++){
   taps[i].addEventListener("click",function(evt){filter(evt)})
   taps[i].addEventListener("click", (e) => moveUnderLine(e));
@@ -75,10 +76,11 @@ function handleDelete (id){
 for(let i=0;i<todoList.length; i++){
   if(todoList[i].id === id){
     todoList.splice(i,1);
+  
     break;
   }
 }
-render()
+filter({ target: { id: mode } });
 }
 
 function handleCheck (id){
@@ -95,7 +97,7 @@ function handleCheck (id){
 }
 
 function render(){
-  let list =[]
+  list =[]
 if(mode ==="all"){
    list = todoList
 
