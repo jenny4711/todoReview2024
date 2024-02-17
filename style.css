@@ -4,13 +4,13 @@ body{
   background-repeat: no-repeat;
   background-size: contain; /* 혹은 auto로 설정하여 원본 이미지 크기에 맞게 표시될 수 있습니다. */
   background-position: center;
-  min-height: 137vh;
-  min-width:100vh;
+   min-height: 137vh; 
+  min-width:100vh; 
   background-color:#ffc309 ;
-  display:flex;
+  /* display:flex;
   justify-content: center;
 
-  text-align: center;
+  text-align: center; */
 
 
 }
@@ -54,18 +54,18 @@ align-items: center;
 }
 .taskArea{
   border:1px solid lightgray;
-  width:100%;
+  width:50%;
   margin-top: 20px;
 }
 #underLine{
-height:4px;
-background-color: red;
-position:absolute;
-
-width:50px;
-left:230px;
-top:50px;
-padding:0px;
+  height:4px;
+  background-color: darkred;
+  position:absolute;
+  width:60px;
+  left:100px;
+  top:52px;
+  padding:0px;
+  transition:0.5s;
 }
 .task{
   display:flex;
@@ -100,4 +100,3 @@ padding:0px;
 
   }
 }
-

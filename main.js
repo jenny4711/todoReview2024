@@ -63,10 +63,12 @@ function filter(evt) {
     for (let i = 0; i < todoList.length; i++) {
       if (todoList[i].isComplete === true) {
         filterList.push(todoList[i]);
+      
       }
     }
+    render()
   }
-  render();
+  
 }
 
 function handleDelete (id){
@@ -87,7 +89,7 @@ function handleCheck (id){
       break;
     }
   }
-  render();
+  filter({ target: { id: mode } });
   console.log(todoList);
 
 }
@@ -95,11 +97,11 @@ function handleCheck (id){
 function render(){
   let list =[]
 if(mode ==="all"){
-list =todoList
-}else if(mode === "ongoing"){
+   list = todoList
+
+}else{
 list = filterList
-}else if(mode === "done"){
-  list =filterList
+
 }
 
 
@@ -107,6 +109,8 @@ list = filterList
   for(let i=0;i<list.length;i++){
  
  const taskClass=list[i].isComplete?'taskDone':''
+ 
+ 
   
     resultHTML +=`<div class="task">
     <div class='${taskClass}'>${list[i].taskContent}</div>
